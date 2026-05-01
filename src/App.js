@@ -166,12 +166,12 @@ export default function App() {
       <section id="about" className="section section-about">
         <div className="container">
           <div className="section-header">
-            <div className="section-eyebrow">Why Families Choose SEBA</div>
+            <div className="section-eyebrow">Why Families Choose RHC</div>
             <h2 className="section-title">
               A camp experience built around growth, confidence, and community.
             </h2>
             <p className="section-text">
-              SEBA is designed for elementary-aged players who are ready to
+              RHC is designed for elementary-aged players who are ready to
               learn, compete, and enjoy the game. Our goal is to create a camp
               that feels organized, instructional, and energetic while staying
               grounded in positive encouragement and strong community values.
@@ -192,8 +192,8 @@ export default function App() {
       <section id="schedule" className="section section-crimson">
         <div className="container schedule-intro">
           <img
-            src="/SEBA basketball alt.png"
-            alt="SEBA badge"
+            src="/assets/rhc-crest-primary.png"
+            alt="Rivertown Hoops Camp badge"
             className="section-logo-badge"
           />
           <div className="schedule-intro-copy">
@@ -251,7 +251,7 @@ export default function App() {
               families and the Franklin community
             </div>
             <div className="trust-strip-item">
-              All SEBA camp operations are insured and first aid kits are always
+              All RHC camp operations are insured and first aid kits are always
               available
             </div>
           </div>
@@ -260,8 +260,8 @@ export default function App() {
         <div className="container register-stack">
           <div className="register-header">
             <img
-              src="/SEBA basketball.png"
-              alt="SEBA logo"
+              src="/assets/rhc-crest-primary.png"
+              alt="Rivertown Hoops Camp logo"
               className="register-logo"
             />
             <div>
@@ -312,7 +312,7 @@ export default function App() {
               <div className="mini-card">
                 <div className="mini-label">Coaching Support</div>
                 <div className="mini-value">
-                  Parent coaches + Franklin player volunteers
+                  Parent coaches + Specialists + Franklin player volunteers
                 </div>
               </div>
               <div className="mini-card">
