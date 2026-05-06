@@ -4,55 +4,57 @@ export default function CampDetailsPage() {
   return (
     <div className="page registration-page camp-details-page">
       <header className="site-nav">
-        <div className="container nav-inner">
-          <a href="/" className="nav-brand">
-            <img
-              src="/SEBA basketball alt.png"
-              alt="SEBA"
-              className="nav-logo"
-            />
-            <span className="nav-brand-text">SEBA</span>
-          </a>
+  	<div className="container nav-inner">
+    	<a href="/" className="nav-brand" aria-label="Rivertown Hoops Camp home">
+    	  <picture className="nav-logo-picture">
+        <source media="(max-width: 768px)" srcSet="/assets/rhc-mark.png" />
+        <img
+          src="/assets/rhc-lockup.png"
+          alt="Rivertown Hoops Camp"
+          className="nav-logo nav-logo-rhc"
+        />
+      </picture>
+    	</a>
 
-          <nav className="nav-links">
-            <div className="nav-item">
-              <a href="/about">About</a>
-            </div>
+    	<nav className="nav-links" aria-label="Main navigation">
+      	<div className="nav-item">
+        <a href="/about">About</a>
+      	</div>
 
-            <div className="nav-item">
-              <a href="/camp-details">Camp Details</a>
-            </div>
+      <div className="nav-item">
+        <a href="/camp-details">Camp Details</a>
+      </div>
 
-            <div className="nav-item">
-              <a href="/registration-form">Register</a>
-              <div className="dropdown">
-                <a href="/registration-form">Registration Form</a>
-                <a href="/waiver-photo-release">Waiver & Photo Release</a>
-                <a href="/camp-policies">Camp Policies</a>
-              </div>
-            </div>
-          </nav>
+      <div className="nav-item">
+        <a href="/registration-form">Register</a>
+        <div className="dropdown">
+          <a href="/registration-form">Registration Form</a>
+          <a href="/waiver-photo-release">Waiver & Photo Release</a>
+          <a href="/camp-policies">Camp Policies</a>
         </div>
-      </header>
+      </div>
+    </nav>
+  </div>
+</header>
 
       <main className="section section-register">
         <div className="container register-stack">
           <div className="register-header">
             <img
-              src="/SEBA basketball.png"
-              alt="SEBA logo"
-              className="register-logo"
-            />
+  src="/assets/rhc-crest-primary.png"
+  alt="Rivertown Hoops Camp logo"
+  className="register-logo"
+/>
             <div>
               <div className="section-eyebrow">Camp Details</div>
               <h1 className="section-title small-margin">
-                What families can expect from SEBA
-              </h1>
-              <p className="section-text">
-                Southeast Basketball Academy is designed as a full-week,
-                high-energy youth basketball camp built around skill
-                development, positive coaching, competition, and community.
-              </p>
+  What families can expect from RHC
+</h1>
+<p className="section-text">
+  Rivertown Hoops Camp is designed as a full-week, high-energy
+  youth basketball camp built around skill development, positive
+  coaching, competition, and community.
+</p>
             </div>
           </div>
 
@@ -84,17 +86,17 @@ export default function CampDetailsPage() {
               <div className="form-section location-map-card">
                 <h3>Gym Location</h3>
                 <img
-                  src="/Gym Location.png"
-                  alt="Franklin High School gym entrance and parking map"
-                  className="location-map-image"
-                />
+  src="/assets/Gym Location.png"
+  alt="Franklin High School gym entrance and parking map"
+  className="location-map-image"
+/>
               </div>
             </div>
 
             <div className="form-section">
               <h3>Coaching + Support</h3>
               <p className="form-text">
-                SEBA is led by Coach Nate Forster with support from parent
+                RHC is led by Coach Nate Forster with support from parent
                 coaches and volunteer counselors connected to the Franklin
                 Basketball Program. The camp is independently operated and is
                 designed to give young players a positive, local basketball

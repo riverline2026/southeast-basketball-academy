@@ -70,111 +70,108 @@ export default function App() {
   return (
     <div className="page">
       <header className="site-nav">
-        <div className="container nav-inner">
-          <a href="/" className="nav-brand">
-            <img
-              src="/SEBA basketball alt.png"
-              alt="SEBA"
-              className="nav-logo"
-            />
-            <span className="nav-brand-text">SEBA</span>
-          </a>
+  	<div className="container nav-inner">
+    	<a href="/" className="nav-brand" aria-label="Rivertown Hoops Camp home">
+    	  <picture className="nav-logo-picture">
+        <source media="(max-width: 768px)" srcSet="/assets/rhc-mark.png" />
+        <img
+          src="/assets/rhc-lockup.png"
+          alt="Rivertown Hoops Camp"
+          className="nav-logo nav-logo-rhc"
+        />
+      </picture>
+    	</a>
 
-          <nav className="nav-links">
-            <div className="nav-item">
-              <a href="/about">About</a>
-            </div>
+    	<nav className="nav-links" aria-label="Main navigation">
+      	<div className="nav-item">
+        <a href="/about">About</a>
+      	</div>
 
-            <div className="nav-item">
-              <a href="/camp-details">Camp Details</a>
-            </div>
+      <div className="nav-item">
+        <a href="/camp-details">Camp Details</a>
+      </div>
 
-            <div className="nav-item">
-              <a href="/registration-form">Register</a>
-              <div className="dropdown">
-                <a href="/registration-form">Registration Form</a>
-                <a href="/waiver-photo-release">Waiver & Photo Release</a>
-                <a href="/camp-policies">Camp Policies</a>
-              </div>
-            </div>
-          </nav>
+      <div className="nav-item">
+        <a href="/registration-form">Register</a>
+        <div className="dropdown">
+          <a href="/registration-form">Registration Form</a>
+          <a href="/waiver-photo-release">Waiver & Photo Release</a>
+          <a href="/camp-policies">Camp Policies</a>
         </div>
-      </header>
+      </div>
+    </nav>
+  </div>
+</header>
 
       <section className="hero" id="top">
-        <div className="hero-overlay" />
+  <div className="hero-overlay" />
 
-        <img
-          src="/Dribbler.png"
-          alt=""
-          className="hero-silhouette silhouette-left"
-        />
-        <img
-          src="/Shooter.png"
-          alt=""
-          className="hero-silhouette silhouette-right"
-        />
+  <img
+    src="/assets/Dribbler.png"
+    alt=""
+    className="hero-silhouette silhouette-left"
+  />
+  <img
+    src="/assets/Shooter.png"
+    alt=""
+    className="hero-silhouette silhouette-right"
+  />
 
-        <div className="container hero-centered">
-          <img
-            src="/SEBA basketball.png"
-            alt="Southeast Basketball Academy logo"
-            className="hero-logo"
-          />
+  <div className="container hero-centered">
+    <img
+      src="/assets/rhc-crest-primary.png"
+      alt="Rivertown Hoops Camp crest logo"
+      className="hero-logo hero-logo-rhc"
+    />
 
-          <h1 className="hero-title">
-            <span className="hero-big-letter">S</span>OUTH
-            <span className="hero-big-letter">E</span>AST{" "}
-            <span className="hero-big-letter">B</span>ASKETBALL{" "}
-            <span className="hero-big-letter">A</span>CADEMY
-          </h1>
+    <h1 className="hero-title">Rivertown Hoops Camp</h1>
 
-          <h2 className="hero-subtitle">
-            Fun, focused basketball skills development for young players.
-          </h2>
+    <h2 className="hero-subtitle">
+      Fun, focused basketball skills development for young players.
+    </h2>
 
-          <p className="hero-text hero-text-centered">
-            Southeast Basketball Academy is an elementary aged high-energy youth
-            basketball camp offering an engaging experience rooted in having fun
-            through competition and sport, positive coaching, skill building,
-            and community values.
-          </p>
+    <p className="hero-text hero-text-centered">
+      Rivertown Hoops Camp is an elementary-aged, high-energy youth basketball
+      camp offering an engaging experience rooted in having fun through
+      competition and sport, positive coaching, skill building, and community
+      values.
+    </p>
 
-          <p className="hero-text hero-text-centered hero-text-secondary">
-            Designed by coaches and parents for local families and young players
-            in Southeast Portland, SEBA seeks to create an organized, welcoming,
-            energetic, and deeply connected space for kids and families in the
-            Franklin High School area communities.
-          </p>
+    <p className="hero-text hero-text-centered hero-text-secondary">
+      Designed by coaches and parents for local families and young players in
+      Southeast Portland, RHC creates an organized, welcoming, energetic, and
+      deeply connected space for kids and families in the Franklin High School
+      area communities.
+    </p>
 
-          <div className="button-row button-row-centered">
-            <a href="/registration-form" className="btn btn-primary">
-              Register Now
-            </a>
-            <a href="#about" className="btn btn-secondary">
-              Learn More
-            </a>
-          </div>
+    <div className="button-row button-row-centered">
+      <a href="/registration-form" className="btn btn-primary">
+        Register Now
+      </a>
+      <a href="#about" className="btn btn-secondary">
+        Learn More
+      </a>
+    </div>
 
-          <div className="info-bar">
-            {infoBarItems.map((item) => (
-              <div key={item} className="info-bar-item">
-                {item}
-              </div>
-            ))}
-          </div>
+    <div className="info-bar">
+      {infoBarItems.map((item) => (
+        <div key={item} className="info-bar-item">
+          {item}
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
       <section id="about" className="section section-about">
         <div className="container">
           <div className="section-header">
-            <div className="section-eyebrow">Why Families Choose SEBA</div>
+            <div className="section-eyebrow">Why Families Choose RHC</div>
             <h2 className="section-title">
               A camp experience built around growth, confidence, and community.
             </h2>
             <p className="section-text">
-              SEBA is designed for elementary-aged players who are ready to
+              RHC is designed for elementary-aged players who are ready to
               learn, compete, and enjoy the game. Our goal is to create a camp
               that feels organized, instructional, and energetic while staying
               grounded in positive encouragement and strong community values.
@@ -195,16 +192,16 @@ export default function App() {
       <section id="schedule" className="section section-crimson">
         <div className="container schedule-intro">
           <img
-            src="/SEBA basketball alt.png"
-            alt="SEBA badge"
-            className="section-logo-badge"
-          />
+  src="/assets/rhc-crest-primary.png"
+  alt="Rivertown Hoops Camp badge"
+  className="section-logo-badge"
+/>
           <div className="schedule-intro-copy">
             <div className="section-eyebrow section-eyebrow-light">
               Camp Schedule + Inclusions
             </div>
             <h2 className="section-title section-title-light">
-              A full week of basketball, structure, competition, and fun.
+              A full week of basketball, structured competition, and fun!
             </h2>
           </div>
         </div>
@@ -254,7 +251,7 @@ export default function App() {
               families and the Franklin community
             </div>
             <div className="trust-strip-item">
-              All SEBA camp operations are insured and first aid kits are always
+              All RHC camp operations are insured and first aid kits are always
               available
             </div>
           </div>
@@ -262,11 +259,11 @@ export default function App() {
 
         <div className="container register-stack">
           <div className="register-header">
-            <img
-              src="/SEBA basketball.png"
-              alt="SEBA logo"
-              className="register-logo"
-            />
+          	<img
+  src="/assets/rhc-crest-primary.png"
+  alt="Rivertown Hoops Camp logo"
+  className="register-logo"
+/>
             <div>
               <div className="section-eyebrow">Registration</div>
               <h2 className="section-title small-margin">

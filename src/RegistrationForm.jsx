@@ -4,43 +4,45 @@ export default function RegistrationForm() {
   return (
     <div className="page registration-page">
       <header className="site-nav">
-        <div className="container nav-inner">
-          <a href="/" className="nav-brand">
-            <img
-              src="/SEBA basketball alt.png"
-              alt="SEBA"
-              className="nav-logo"
-            />
-            <span className="nav-brand-text">SEBA</span>
-          </a>
+  	<div className="container nav-inner">
+    	<a href="/" className="nav-brand" aria-label="Rivertown Hoops Camp home">
+    	  <picture className="nav-logo-picture">
+        <source media="(max-width: 768px)" srcSet="/assets/rhc-mark.png" />
+        <img
+          src="/assets/rhc-lockup.png"
+          alt="Rivertown Hoops Camp"
+          className="nav-logo nav-logo-rhc"
+        />
+      </picture>
+    	</a>
 
-          <nav className="nav-links">
-            <div className="nav-item">
-              <a href="/about">About</a>
-            </div>
+    	<nav className="nav-links" aria-label="Main navigation">
+      	<div className="nav-item">
+        <a href="/about">About</a>
+      	</div>
 
-            <div className="nav-item">
-              <a href="/camp-details">Camp Details</a>
-            </div>
+      <div className="nav-item">
+        <a href="/camp-details">Camp Details</a>
+      </div>
 
-            <div className="nav-item">
-              <a href="/registration-form">Register</a>
-              <div className="dropdown">
-                <a href="/registration-form">Registration Form</a>
-                <a href="/waiver-photo-release">Waiver & Photo Release</a>
-                <a href="/camp-policies">Camp Policies</a>
-              </div>
-            </div>
-          </nav>
+      <div className="nav-item">
+        <a href="/registration-form">Register</a>
+        <div className="dropdown">
+          <a href="/registration-form">Registration Form</a>
+          <a href="/waiver-photo-release">Waiver & Photo Release</a>
+          <a href="/camp-policies">Camp Policies</a>
         </div>
-      </header>
+      </div>
+    </nav>
+  </div>
+</header>
 
       <main className="section section-register">
         <div className="container register-stack">
           <div className="register-header">
             <img
-              src="/SEBA basketball.png"
-              alt="SEBA logo"
+              src="/assets/rhc-crest-primary.png"
+alt="Rivertown Hoops Camp logo"
               className="register-logo"
             />
             <div>

@@ -5,16 +5,18 @@ export default function AboutPage() {
     <div className="page registration-page">
       <header className="site-nav">
         <div className="container nav-inner">
-          <a href="/" className="nav-brand">
-            <img
-              src="/SEBA basketball alt.png"
-              alt="SEBA"
-              className="nav-logo"
-            />
-            <span className="nav-brand-text">SEBA</span>
+          <a href="/" className="nav-brand" aria-label="Rivertown Hoops Camp home">
+            <picture className="nav-logo-picture">
+              <source media="(max-width: 768px)" srcSet="/assets/rhc-mark.png" />
+              <img
+                src="/assets/rhc-lockup.png"
+                alt="Rivertown Hoops Camp"
+                className="nav-logo nav-logo-rhc"
+              />
+            </picture>
           </a>
 
-          <nav className="nav-links">
+          <nav className="nav-links" aria-label="Main navigation">
             <div className="nav-item">
               <a href="/about">About</a>
             </div>
@@ -39,20 +41,22 @@ export default function AboutPage() {
         <div className="container register-stack">
           <div className="register-header">
             <img
-              src="/SEBA basketball.png"
-              alt="SEBA logo"
+              src="/assets/rhc-crest-primary.png"
+              alt="Rivertown Hoops Camp logo"
               className="register-logo"
             />
+
             <div>
-              <div className="section-eyebrow">About SEBA</div>
+              <div className="section-eyebrow">About RHC</div>
               <h1 className="section-title small-margin">
                 Meet the Head Coach and Camp Director
               </h1>
               <p className="section-text">
-                Southeast Basketball Academy is led by a local coach and parent
-                focused on creating a fun, structured, and high-energy
-                basketball experience for young basketball players in the Mt.
-                Tabor, Franklin High School surrounding communities.
+                Rivertown Hoops Camp is led by a local coach and parent focused
+                on creating a fun, structured, and high-energy basketball
+                experience for young basketball players in the Mt. Tabor,
+                Franklin High School, and surrounding Southeast Portland
+                communities.
               </p>
             </div>
           </div>
@@ -61,16 +65,16 @@ export default function AboutPage() {
             <div className="form-section">
               <h3>Coach Nate Forster</h3>
               <p className="form-text">
-                Nate is the Head Coach and Camp Director of Southeast Basketball
-                Academy. He brings a lifelong connection to basketball, 6 years
-                of experience coaching young kids, and a strong commitment to
+                Nate is the Head Coach and Camp Director of Rivertown Hoops
+                Camp. He brings a lifelong connection to basketball, 6 years of
+                experience coaching young kids, and a strong commitment to
                 creating positive, structured environments for young athletes.
               </p>
               <p className="form-text">
                 Coach Nate's approach to coaching is rooted in clarity,
                 consistency, and positive encouragement. He believes players
-                develop best when they are challenged, supported, and given
-                clear expectations in a well-organized environment.
+                develop best when they are challenged, supported, and given clear
+                expectations in a well-organized environment.
               </p>
             </div>
 
@@ -86,9 +90,8 @@ export default function AboutPage() {
                   encouraging, and focused on growth.
                 </li>
                 <li>
-                  <strong>Skill development:</strong> Players must learn the
-                  foundational basics they can build their skills on in future
-                  seasons.
+                  <strong>Skill development:</strong> Players learn foundational
+                  basics they can build on in future seasons.
                 </li>
                 <li>
                   <strong>Competition:</strong> Players put the instruction to
@@ -102,32 +105,32 @@ export default function AboutPage() {
             </div>
 
             <div className="form-section">
-              <h3>Why SEBA Was Created</h3>
+              <h3>Why RHC Was Created</h3>
               <p className="form-text">
-                Southeast Basketball Academy is founded with the intent of
-                building community through sport. Coach Nate hopes that this
-                camp will help prepare young players for their competitive
-                journey and develop a love of the game.
+                Rivertown Hoops Camp was created to build community through
+                sport. Coach Nate hopes the camp helps prepare young players for
+                their competitive journey while developing a lasting love of the
+                game.
               </p>
               <p className="form-text">
                 The goal is simple: provide a camp that is organized, energetic,
-                and development-focused—while still feeling welcoming and fun
-                for kids and easy for parents.
+                and development-focused while still feeling welcoming and fun for
+                kids and easy for parents.
               </p>
             </div>
 
             <div className="form-section">
               <h3>Community Connection</h3>
               <p className="form-text">
-                SEBA is rooted in the Southeast Portland community and is
-                designed to serve families in the Franklin High School district.
-                The camp is supported by volunteer counselors connected to the
-                Franklin Basketball Program, helping create a strong sense of
-                connection for young players.
+                RHC is rooted in the Southeast Portland community and is designed
+                to serve families in the Franklin High School district. The camp
+                is supported by volunteer counselors connected to the Franklin
+                Basketball Program, helping create a strong sense of connection
+                for young players.
               </p>
               <p className="form-text">
-                While SEBA is independently operated, it is intentionally built
-                to feel connected to the local basketball community and to give
+                While RHC is independently operated, it is intentionally built to
+                feel connected to the local basketball community and to give
                 players something to grow into as they get older.
               </p>
             </div>
