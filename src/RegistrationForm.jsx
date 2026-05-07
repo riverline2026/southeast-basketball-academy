@@ -1,6 +1,171 @@
 import { useState } from "react";
 import "./styles.css";
 
+const MODAL_CONTENT = {
+  waiver: {
+    title: "Waiver and Release / Medical Authorization",
+    fullPageUrl: "/waiver-photo-release",
+    body: (
+      <>
+        <section className="registration-modal-section">
+          <h3>Waiver and Release of Liability</h3>
+          <p>
+            I am the parent or legal guardian of the minor participant being
+                registered for Rivertown Hoops Camp. I understand that
+                basketball, fitness activities, drills, scrimmages, games, and
+                related camp activities involve inherent risks, including but
+                not limited to falls, collisions, contact with other players,
+                physical exertion, dehydration, sprains, strains, broken bones,
+                head injuries, or other injury.
+          </p>
+          <p>
+            I knowingly and voluntarily allow my child/dependent to
+                participate in Rivertown Hoops Camp and assume the risks
+                associated with their participation. To the fullest extent
+                permitted by law, I release, waive, discharge, and hold harmless
+                Rivertown Hoops Camp, Riverline Partners LLC, coaches,
+                volunteers, staff, contractors, and affiliated partners from
+                claims arising out of my child/dependent’s participation in camp
+                activities.
+          </p>
+<p>
+            I understand that this waiver is intended to apply to claims
+                relating to injury, illness, property loss, or damages connected
+                with participation in Rivertown Hoops Camp, except where
+                such release is prohibited by law.
+          </p>
+        </section>
+
+        <section className="registration-modal-section">
+          <h3>Medical Authorization</h3>
+          <p>
+            I authorize Rivertown Hoops Camp staff, coaches, or
+                volunteers to provide basic first aid and to contact emergency
+                medical services if my child/dependent becomes ill, injured, or
+                requires urgent attention during camp.
+          </p>
+          <p>
+            If emergency care is needed and I cannot be reached, I authorize
+                RHC staff to arrange medical transport, including ambulance
+                transport when appropriate, to a hospital, urgent care, or other
+                medical facility. I understand that I am responsible for any
+                medical, emergency, transportation, or treatment costs incurred.
+          </p>
+          <p>
+            I confirm that the medical and allergy information provided
+                during registration is accurate to the best of my knowledge and
+                that I will notify RHC of any changes before camp begins.
+          </p>
+        </section>
+
+        <section className="registration-modal-section">
+          <h3>Parent / Guardian Acknowledgment</h3>
+          <p>
+            By checking the waiver and medical authorization acknowledgment box on the registration form, I confirm that
+            I have read, understand, and agree to the waiver, release, and medical authorization terms.
+          </p>
+        </section>
+      </>
+    ),
+  },
+
+  policies: {
+    title: "Camp Policies",
+    fullPageUrl: "/camp-policies",
+    body: (
+      <>
+        <section className="registration-modal-section">
+          <h3>Drop-Off and Pick-Up</h3>
+          <p>
+            Campers should be dropped off and picked up at the designated camp location during the published camp times.
+            Parents and guardians are expected to arrive on time for pick-up. If another adult is picking up a camper,
+            that person should be listed or communicated to camp staff in advance.
+          </p>
+        </section>
+
+        <section className="registration-modal-section">
+          <h3>Behavior and Sportsmanship</h3>
+          <p>
+            Rivertown Hoops Camp is built around positive coaching, effort, teamwork, respect, and sportsmanship.
+            Campers are expected to listen to coaches, respect other campers, use appropriate language, and participate
+            safely and constructively.
+          </p>
+          <p>
+            Camp staff may redirect, sit out, or contact a parent or guardian if a camper’s behavior is unsafe,
+            disruptive, or inconsistent with camp expectations.
+          </p>
+        </section>
+
+        <section className="registration-modal-section">
+          <h3>What to Bring</h3>
+          <p>
+            Campers should bring basketball shoes or athletic shoes, a water bottle, lunch, snacks, and any personal
+            medical items they may need during the camp day. Campers should not bring valuables or unnecessary personal
+            items.
+          </p>
+        </section>
+
+        <section className="registration-modal-section">
+          <h3>Food, Allergies, and Medical Needs</h3>
+          <p>
+            Parents and guardians are responsible for providing food and snacks appropriate for their camper. Any allergies,
+            medications, or medical needs should be disclosed during registration so camp staff can be aware and respond
+            appropriately.
+          </p>
+        </section>
+
+        <section className="registration-modal-section">
+          <h3>Refunds and Cancellations</h3>
+          <p>
+            Registration fees, refund timing, cancellation policies, and any exceptions will be handled according to the
+            camp policies communicated on the Rivertown Hoops Camp website or directly by camp leadership.
+          </p>
+        </section>
+
+        <section className="registration-modal-section">
+          <h3>Parent / Guardian Acknowledgment</h3>
+          <p>
+            By checking the camp policies acknowledgment box on the registration form, I confirm that I have read,
+            understand, and agree to the camp policies.
+          </p>
+        </section>
+      </>
+    ),
+  },
+
+  photo: {
+    title: "Photo Release",
+    fullPageUrl: "/waiver-photo-release",
+    body: (
+      <>
+        <section className="registration-modal-section">
+          <h3>Photo and Media Release</h3>
+          <p>
+            Rivertown Hoops Camp may take photos or short videos
+                during camp for limited use in RHC-owned and RHC-controlled
+                communications, including the RHC website, RHC social media
+                accounts, future camp announcements, and camp-related
+                promotional materials.
+          </p>
+          <p>
+            RHC will not sell player images or intentionally use a child’s
+                full name in public promotional posts without additional
+                permission.
+          </p>
+<p>
+            Parents and guardians may choose whether to grant permission for their child’s image to be used. The
+            registration form includes a photo release choice so families can opt in or opt out.
+          </p>
+          <p>
+            By selecting the photo release option on the registration form, I confirm my preference regarding whether
+            Rivertown Hoops Camp may use photos or videos of my child for camp-related purposes.
+          </p>
+        </section>
+      </>
+    ),
+  },
+};
+
 const initialForm = {
   camper_first_name: "",
   camper_last_name: "",
@@ -46,6 +211,15 @@ const initialForm = {
 };
 
 export default function RegistrationForm() {
+  const [activeModal, setActiveModal] = useState(null);
+
+  const openRegistrationModal = (modalType) => {
+    setActiveModal(modalType);
+  };
+
+  const closeRegistrationModal = () => {
+    setActiveModal(null);
+  };
   const [form, setForm] = useState(initialForm);
   const [submitState, setSubmitState] = useState({
     status: "idle",
@@ -511,7 +685,7 @@ export default function RegistrationForm() {
                 </label>
               </div>
 
-              <div className="form-section">
+                            <div className="form-section">
                 <h3>Waiver, Medical Authorization + Camp Policies</h3>
 
                 <label className="checkbox-label">
@@ -523,10 +697,20 @@ export default function RegistrationForm() {
                     required
                   />
                   <span>
-  I have read and accept the{" "}
-  <a href="/waiver-photo-release">waiver and release of liability</a>{" "}
-  for Rivertown Hoops Camp. *
-</span>
+                    I have read and accept the{" "}
+                    <button
+                      type="button"
+                      className="inline-modal-link"
+                      onClick={(event) => {
+                        event.preventDefault();
+                        event.stopPropagation();
+                        openRegistrationModal("waiver");
+                      }}
+                    >
+                      Waiver and Release / Medical Authorization
+                    </button>
+                    .
+                  </span>
                 </label>
 
                 <label className="checkbox-label">
@@ -538,10 +722,21 @@ export default function RegistrationForm() {
                     required
                   />
                   <span>
-  I authorize camp staff to seek emergency medical care for my player
-  if needed and I cannot be reached, as described in the{" "}
-  <a href="/waiver-photo-release">waiver and medical authorization</a>. *
-</span>
+                    I authorize camp staff to seek emergency medical care for my
+                    player if needed and I cannot be reached, as described in the{" "}
+                    <button
+                      type="button"
+                      className="inline-modal-link"
+                      onClick={(event) => {
+                        event.preventDefault();
+                        event.stopPropagation();
+                        openRegistrationModal("waiver");
+                      }}
+                    >
+                      Waiver and Release / Medical Authorization
+                    </button>
+                    .
+                  </span>
                 </label>
 
                 <label className="checkbox-label">
@@ -553,10 +748,20 @@ export default function RegistrationForm() {
                     required
                   />
                   <span>
-  I have read and agree to the{" "}
-  <a href="/camp-policies">camp policies</a>, including behavior,
-  check-in/check-out, and participation expectations. *
-</span>
+                    I have read and agree to the{" "}
+                    <button
+                      type="button"
+                      className="inline-modal-link"
+                      onClick={(event) => {
+                        event.preventDefault();
+                        event.stopPropagation();
+                        openRegistrationModal("policies");
+                      }}
+                    >
+                      Camp Policies
+                    </button>
+                    .
+                  </span>
                 </label>
 
                 <p className="form-note">
@@ -565,8 +770,24 @@ export default function RegistrationForm() {
                 </p>
               </div>
 
-              <div className="form-section">
+                            <div className="form-section">
                 <h3>Photo Release</h3>
+
+                <p className="form-note">
+                  Please review the{" "}
+                  <button
+                    type="button"
+                    className="inline-modal-link"
+                    onClick={(event) => {
+                      event.preventDefault();
+                      event.stopPropagation();
+                      openRegistrationModal("photo");
+                    }}
+                  >
+                    Photo Release
+                  </button>{" "}
+                  and select your preference below.
+                </p>
 
                 <div className="radio-stack">
                   <label className="radio-label">
@@ -658,7 +879,61 @@ export default function RegistrationForm() {
             </form>
           )}
         </div>
-      </main>
+           </main>
+
+      {activeModal && MODAL_CONTENT[activeModal] && (
+        <div
+          className="registration-modal-backdrop"
+          role="presentation"
+          onClick={closeRegistrationModal}
+        >
+          <div
+            className="registration-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="registration-modal-title"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <div className="registration-modal-header">
+              <h2 id="registration-modal-title">
+                {MODAL_CONTENT[activeModal].title}
+              </h2>
+
+              <button
+                type="button"
+                className="registration-modal-x"
+                onClick={closeRegistrationModal}
+                aria-label="Close modal and return to registration"
+              >
+                ×
+              </button>
+            </div>
+
+            <div className="registration-modal-body">
+              {MODAL_CONTENT[activeModal].body}
+            </div>
+
+            <div className="registration-modal-footer">
+              <a
+                href={MODAL_CONTENT[activeModal].fullPageUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="registration-modal-secondary-link"
+              >
+                Open full page in new tab
+              </a>
+
+              <button
+                type="button"
+                className="registration-modal-close-button"
+                onClick={closeRegistrationModal}
+              >
+                Close and return to registration
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
