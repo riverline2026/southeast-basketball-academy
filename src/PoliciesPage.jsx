@@ -4,47 +4,47 @@ export default function PoliciesPage() {
   return (
     <div className="page registration-page">
       <header className="site-nav">
-        <div className="container nav-inner">
-          <a href="/" className="nav-brand" aria-label="Rivertown Hoops Camp home">
-            <picture className="nav-logo-picture">
-              <source media="(max-width: 768px)" srcSet="/assets/rhc-mark.png" />
-              <img
-                src="/assets/rhc-lockup.png"
-                alt="Rivertown Hoops Camp"
-                className="nav-logo nav-logo-rhc"
-              />
-            </picture>
-          </a>
-      
-          <nav className="nav-links" aria-label="Main navigation">
-            <div className="nav-item">
-              <a href="/about">About</a>
-            </div>
-      
-            <div className="nav-item">
-              <a href="/camp-details">Camp Details</a>
-            </div>
-      
-            <div className="nav-item">
-              <a href="/registration-form">Register</a>
-              <div className="dropdown">
-                <a href="/registration-form">Registration Form</a>
-                <a href="/waiver-photo-release">Waiver & Photo Release</a>
-                <a href="/camp-policies">Camp Policies</a>
-              </div>
-            </div>
-          </nav>
+  	<div className="container nav-inner">
+    	<a href="/" className="nav-brand" aria-label="Rivertown Hoops Camp home">
+    	  <picture className="nav-logo-picture">
+        <source media="(max-width: 768px)" srcSet="/assets/rhc-mark.png" />
+        <img
+          src="/assets/rhc-lockup.png"
+          alt="Rivertown Hoops Camp"
+          className="nav-logo nav-logo-rhc"
+        />
+      </picture>
+    	</a>
+
+    	<nav className="nav-links" aria-label="Main navigation">
+      	<div className="nav-item">
+        <a href="/about">About</a>
+      	</div>
+
+      <div className="nav-item">
+        <a href="/camp-details">Camp Details</a>
+      </div>
+
+      <div className="nav-item">
+        <a href="/registration-form">Register</a>
+        <div className="dropdown">
+          <a href="/registration-form">Registration Form</a>
+          <a href="/waiver-photo-release">Waiver & Photo Release</a>
+          <a href="/camp-policies">Camp Policies</a>
         </div>
-      </header>
+      </div>
+    </nav>
+  </div>
+</header>
 
       <main className="section section-register">
         <div className="container register-stack">
           <div className="register-header">
             <img
-              src="/SEBA basketball.png"
-              alt="SEBA logo"
-              className="register-logo"
-            />
+  src="/assets/rhc-crest-primary.png"
+  alt="Rivertown Hoops Camp logo"
+  className="register-logo"
+/>
             <div>
               <div className="section-eyebrow">Camp Policies</div>
               <h1 className="section-title small-margin">
@@ -62,7 +62,7 @@ export default function PoliciesPage() {
             <div className="form-section">
               <h3>Camp Philosophy</h3>
               <p className="form-text">
-                Southeast Basketball Academy is built around positive coaching,
+                Rivertown Hoops Camp is built around positive coaching,
                 skill development, competition, sportsmanship, and community.
                 Players are expected to try hard, listen well, support
                 teammates, and enjoy the game.
@@ -72,9 +72,9 @@ export default function PoliciesPage() {
             <div className="form-section">
               <h3>Player Conduct</h3>
               <p className="form-text">
-                Southeast Basketball Academy understands to that listening and
+                Rivertown Hoops Camp understands to that listening and
                 following complex directions or intricate drills can be
-                challenging for players at this age. SEBA coaches believe that
+                challenging for players at this age. RHC coaches believe that
                 the camp environment creates a unique opportunity to use a fun,
                 positive, structured and competitive environment to teach these
                 skills. Players and coaches will be held accountable to the
@@ -101,7 +101,7 @@ export default function PoliciesPage() {
                   parent/guardian being contacted.
                 </li>
                 <li>
-                  SEBA reserves the right to remove a player from camp if
+                  RHC reserves the right to remove a player from camp if
                   behavior creates a safety concern or materially disrupts the
                   camp environment.
                 </li>
@@ -111,7 +111,7 @@ export default function PoliciesPage() {
             <div className="form-section">
               <h3>Daily Structure + Participation</h3>
               <p className="form-text">
-                Southeast Basketball Academy recognizes that 9:30 am to 3:00 pm
+                Rivertown Hoops Camp recognizes that 9:30 am to 3:00 pm
                 is a long day of activities. To support the player's positive
                 and fun experience the entire day and preserve energy to
                 participate in full, there will be frequent water breaks,
@@ -198,7 +198,7 @@ export default function PoliciesPage() {
                   of the camp day whenever possible.
                 </li>
                 <li>
-                  SEBA staff will not release a player to someone who is not
+                  RHC staff will not release a player to someone who is not
                   listed as an authorized pickup adult.
                 </li>
               </ul>
@@ -217,12 +217,12 @@ export default function PoliciesPage() {
                   bag.
                 </li>
                 <li>
-                  SEBA staff may provide basic first aid and contact emergency
+                  RHC staff may provide basic first aid and contact emergency
                   services if needed.
                 </li>
                 <li>
                   If emergency care or transport is needed and a parent/guardian
-                  cannot be reached, SEBA may arrange emergency medical
+                  cannot be reached, RHC may arrange emergency medical
                   assistance.
                 </li>
               </ul>
@@ -232,7 +232,7 @@ export default function PoliciesPage() {
               <h3>Coach Screening + Insurance</h3>
               <p className="form-text">
                 All coaches will complete background checks before camp. Camp
-                operations will be insured. SEBA is organized by local coaches
+                operations will be insured. RHC is organized by local coaches
                 and parents with a focus on building community, player safety,
                 having fun, clear structure, and positive instruction.
               </p>
@@ -241,7 +241,7 @@ export default function PoliciesPage() {
             <div className="form-section">
               <h3>Communication</h3>
               <p className="form-text">
-                SEBA will communicate important camp updates by email. Families
+                RHC will communicate important camp updates by email. Families
                 are responsible for reviewing camp communications before and
                 during camp, including schedule reminders, check-in details,
                 what to bring, and any operational updates.
@@ -251,13 +251,13 @@ export default function PoliciesPage() {
             <div className="form-section">
               <h3>Refunds + Cancellations</h3>
               <p className="form-text">
-                Registration is considered final once submitted and paid. SEBA
+                Registration is considered final once submitted and paid. RHC
                 will review refund or cancellation requests on a case-by-case
                 basis, including illness, injury, family emergency, or other
                 extenuating circumstances.
               </p>
               <p className="form-text">
-                If SEBA must cancel camp for reasons outside of normal control,
+                If RHC must cancel camp for reasons outside of normal control,
                 families will receive follow-up communication regarding refund
                 or credit options.
               </p>
@@ -267,25 +267,11 @@ export default function PoliciesPage() {
               <h3>Photo + Media</h3>
               <p className="form-text">
                 Photo and video consent is optional and is handled through the
-                Waiver + Photo Release page. SEBA will only use approved photos
-                or videos in SEBA-owned and SEBA-controlled communications, such
-                as the SEBA website, SEBA social media, and future camp
+                Waiver + Photo Release page. RHC will only use approved photos
+                or videos in RHC-owned and RHC-controlled communications, such
+                as the RHC website, RHC social media, and future camp
                 announcements.
               </p>
-            </div>
-
-            <div className="form-next-step">
-              <div>
-                <h3>Ready to continue?</h3>
-                <p>
-                  After reviewing these policies, return to the waiver and photo
-                  release page to complete registration.
-                </p>
-              </div>
-
-              <a href="/waiver-photo-release" className="btn btn-primary">
-                Return to Waiver
-              </a>
             </div>
           </div>
         </div>
