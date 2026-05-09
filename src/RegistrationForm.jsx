@@ -291,6 +291,15 @@ export default function RegistrationForm() {
   const isSubmitting = submitState.status === "submitting";
   const isSuccess = submitState.status === "success";
 
+const stripePaymentLinkBase = process.env.REACT_APP_STRIPE_PAYMENT_LINK_URL || "";
+
+const stripePaymentUrl =
+  stripePaymentLinkBase && submitState.submissionId
+    ? `${stripePaymentLinkBase}?client_reference_id=${encodeURIComponent(
+        submitState.submissionId
+      )}`
+    : stripePaymentLinkBase;
+
   return (
     <div className="page registration-page">
       <header className="site-nav">
@@ -350,19 +359,77 @@ export default function RegistrationForm() {
           </div>
 
           {submitState.status !== "idle" && (
-            <div className={`form-status form-status-${submitState.status}`}>
-              <p>{submitState.message}</p>
-              {submitState.submissionId && (
-                <p>
-                  <strong>Confirmation ID:</strong> {submitState.submissionId}
-                </p>
-              )}
-            </div>
-          )}
+  <div className={`form-status form-status-${submitState.status}`}>
+    <p>{submitState.message}</p>
+    {submitState.submissionId && (
+      <>
+        <p>
+          <strong>Confirmation ID:</strong> {submitState.submissionId}
+        </p>
+
+        {isSuccess && stripePaymentUrl && (
+          <div className="registration-payment-next-step">
+            <p>
+              <strong>Next step:</strong> Your registration is not complete until
+              payment is received.
+            </p>
+            <p>
+  Pay the $275 registration fee using the secure Stripe payment page.
+</p>
+<p>
+  <strong>Discount codes:</strong> Use <strong>EARLY25</strong> for $25 off
+  through June 14, 2026 (6/14/2026), <strong>SIBLING20</strong> for $20 off an
+  additional sibling registration, or <strong>EARLYSIBLING45</strong> if both
+  discounts apply. Only one discount code can be entered at Stripe checkout.
+</p>
+            <p>
+              Please enter your RHC Confirmation ID on the Stripe checkout page
+              so we can match your payment to your registration.
+            </p>
+            <a
+              className="btn primary"
+              href={stripePaymentUrl}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Pay Securely with Stripe
+            </a>
+            <p className="payment-help-text">
+              Questions? Email team@rivertownhoopscamp.com.
+            </p>
+          </div>
+        )}
+      </>
+    )}
+  </div>
+)}
 
           {!isSuccess && (
             <form className="registration-form" onSubmit={handleSubmit}>
               <div className="form-section">
+  <h3>Payment & Discounts</h3>
+  <p>
+    Camp registration is $275. Payment is completed after this form is submitted
+    using our secure Stripe payment page.
+  </p>
+  <p>
+    <strong>Discount codes:</strong>
+  </p>
+  <p>
+    Early registration: Use code <strong>EARLY25</strong> for $25 off through
+    June 14, 2026 (6/14/2026).
+  </p>
+  <p>
+    Sibling discount: Use code <strong>SIBLING20</strong> for $20 off for an
+    additional sibling registration.
+  </p>
+  <p>
+    If both discounts apply, use code <strong>EARLYSIBLING45</strong> for $45
+    off. Only one discount code can be entered at Stripe checkout.
+  </p>
+</div>
+
+<div className="form-section">
                 <h3>Player Information</h3>
 
                 <div className="form-grid">
