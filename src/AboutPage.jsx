@@ -71,6 +71,12 @@ export default function AboutPage() {
                 creating positive, structured environments for young athletes.
               </p>
               <p className="form-text">
+                Questions about camp? Email{" "}
+                <a href="mailto:team@rivertownhoopscamp.com?subject=Question%20about%20Rivertown%20Hoops%20Camp">
+                  team@rivertownhoopscamp.com
+                </a>.
+              </p>
+              <p className="form-text">
                 Coach Nate's approach to coaching is rooted in clarity,
                 consistency, and positive encouragement. He believes players
                 develop best when they are challenged, supported, and given clear

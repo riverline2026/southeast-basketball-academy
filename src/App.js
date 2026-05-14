@@ -325,7 +325,10 @@ export default function App() {
               <a href="/registration-form" className="btn btn-primary">
                 Begin Registration!
               </a>
-              <a href="/contact" className="btn btn-secondary">
+              <a
+                href="mailto:team@rivertownhoopscamp.com?subject=Question%20about%20Rivertown%20Hoops%20Camp"
+                className="btn btn-secondary"
+              >
                 Have a question? We're here to help!
               </a>
             </div>
